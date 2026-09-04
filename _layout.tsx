@@ -10,19 +10,20 @@ export default function RootLayout() {
         screenOptions={{
           headerStyle: { backgroundColor: colors.paper },
           headerTintColor: colors.teal,
-          headerTitleStyle: { fontWeight: '600' },
+          headerTitleStyle: { fontWeight: '600', fontSize: 16 },
           contentStyle: { backgroundColor: colors.paper },
           headerShadowVisible: false,
+          headerBackTitleVisible: false,
         }}
       >
-        <Stack.Screen name="index" options={{ title: 'Rx/Check', headerShown: false }} />
-        <Stack.Screen name="patient" options={{ title: 'Patient details' }} />
-        <Stack.Screen name="prescription" options={{ title: 'Prescription entry' }} />
-        <Stack.Screen name="analysis" options={{ title: 'AI analysis', headerBackVisible: false }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="patient" options={{ headerShown: false }} />
+        <Stack.Screen name="prescription" options={{ title: 'Prescription' }} />
+        <Stack.Screen name="analysis" options={{ title: 'AI scan', headerBackVisible: false }} />
         <Stack.Screen name="results" options={{ title: 'Findings' }} />
         <Stack.Screen name="alternatives" options={{ title: 'Alternatives' }} />
         <Stack.Screen name="report" options={{ title: 'Safety report' }} />
-        <Stack.Screen name="history" options={{ title: 'History' }} />
+        <Stack.Screen name="history" options={{ headerShown: false }} />
         <Stack.Screen name="camera" options={{ title: 'Scan prescription', presentation: 'modal' }} />
       </Stack>
     </>
