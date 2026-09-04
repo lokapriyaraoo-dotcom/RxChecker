@@ -26,34 +26,12 @@ Clinical / editorial React Native (Expo) app for prescription safety checks.
 - **Multi-photo:** up to 5 images.  
 - **OCR confidence** shown on medicine rows / prescription step.  
 - **Dosage validation:** positive numeric dose + normal units (mg, mcg, g, ml, IU, units).  
-- **OCR security:** client-side size cap (8 MB) + magic-byte header check before gateway; `mapGatewayErrorMessage` never leaks hostnames / provider names.  
-
-## Run
-
-```bash
-cd rxcheck
-npm install
-npx expo start
-```
-
-Load IBM Plex via `expo-font` in production for exact typography.
-
-## Tests & CI
-
-```bash
-npm test
-# or
-npm run test:ocr-security
-```
-
-GitHub Actions workflow `.github/workflows/ocr-security.yml` runs the Vitest OCR security suite on every pull request so size-limit, invalid-header, and gateway error-mapping protections cannot regress unnoticed.
+- **OCR security:** client-side size cap (8 MB) + magic-byte header check before gateway; `mapGatewayErrorMessage` never leaks hostnames / provider names
 
 ## Deep links
 
 - Truemeds: `https://www.truemeds.in/search/{drug}`  
 - Tata 1mg: `https://www.1mg.com/search/all?name={drug}`  
-
-Opened via `Linking.openURL` from the Alternatives screen and embedded in the PDF report.
 
 ## Disclaimer
 
