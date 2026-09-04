@@ -1,15 +1,19 @@
-/** Rx/Check clinical design tokens */
+/** Rx/Check — matched to rx-check-safe-scan.lovable.app */
 export const colors = {
   // Brand
   teal: '#0E6E63',
   tealDark: '#0A5249',
+  tealMuted: '#5A9A90',
   tealLight: '#E6F3F1',
+  mint: '#D4EDE8',
 
-  // Paper / background
-  paper: '#F4F6F2',
-  paperGrid: '#E8EBE6',
+  // Surfaces
+  paper: '#F0F4EF',       // soft mint-paper page bg
+  paperGrid: '#E4EAE3',
   white: '#FFFFFF',
-  surface: '#FAFBFO',
+  surface: '#FAFCFA',
+  ink: '#0F1A17',         // near-black for dark cards
+  inkSoft: '#1A2420',
 
   // Severity
   error: '#B33A2E',
@@ -25,10 +29,10 @@ export const colors = {
   textMuted: '#8A938C',
   textInverse: '#FFFFFF',
 
-  // Borders / shadows
-  border: '#D5DBD4',
+  // Borders
+  border: '#D8E0D6',
   borderStrong: '#B8C0B6',
-  shadow: 'rgba(14, 110, 99, 0.08)',
+  shadow: 'rgba(15, 26, 23, 0.06)',
 } as const;
 
 export type Severity = 'error' | 'warning' | 'safe' | 'info';
