@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Rx/Check",
+    "slug": "rxcheck",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F4F6F2"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rxcheck.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Rx/Check needs camera access to scan prescriptions.",
+        "NSPhotoLibraryUsageDescription": "Rx/Check needs photo library access to import prescription images."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0E6E63"
+      },
+      "package": "com.rxcheck.app",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Rx/Check to access your camera to scan prescriptions."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Rx/Check to access your photos to import prescriptions."
+        }
+      ]
+    ],
+    "scheme": "rxcheck",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
