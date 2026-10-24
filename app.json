@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Rx/Check",
+    "slug": "rxcheck",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F4F6F2",
+    "android": {
+      "package": "com.rxcheck.app",
+      "permissions": ["CAMERA"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.rxcheck.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Rx/Check uses the camera to photograph a prescription so it can be read.",
+        "NSPhotoLibraryUsageDescription": "Rx/Check lets you choose a photo of a prescription."
+      }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Rx/Check uses the camera to photograph a prescription so it can be read.",
+          "photosPermission": "Rx/Check lets you choose a photo of a prescription."
+        }
+      ]
+    ],
+    "extra": {
+      "ocrEndpoint": ""
+    }
+  }
+}
