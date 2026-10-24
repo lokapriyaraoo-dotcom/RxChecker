@@ -35,13 +35,19 @@ npm run typecheck
 ## 2. Put it on GitHub
 
 ```bash
-cd rxcheck
+git config --global user.name "Loka"
+git config --global user.email "lokapriyaraoo@gmail.com"
 git init -b main
 git add .
 git commit -m "Rx/Check app"
-# create the empty repo on github.com (or: gh repo create rxcheck --private --source=. --push)
-git remote add origin https://github.com/<you>/rxcheck.git
+git remote add origin https://github.com/lokapriyaraoo-dotcom/RxChecker.git
 git push -u origin main
+```
+
+If `origin` already exists, update it instead:
+
+```bash
+git remote set-url origin https://github.com/lokapriyaraoo-dotcom/RxChecker.git
 ```
 
 After the first `npm install`, commit the generated `package-lock.json` so CI uses `npm ci`.
