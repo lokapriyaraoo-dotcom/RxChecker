@@ -1,4 +1,3 @@
 {
-  "installCommand": "echo \"no install needed: the OCR proxy has no npm dependencies\"",
-  "functions": { "api/ocr.ts": { "maxDuration": 30 } }
+  "installCommand": "npm install --omit=dev --no-audit --no-fund"
 }

@@ -1,8 +1,10 @@
-node_modules/
-.expo/
-dist/
-web-build/
+node_modules
+dist
+.output
+.nitro
+.vinxi
+.tanstack
 *.log
-.env
-.env.local
-.vercel
+.DS_Store
+screenshots
+.grok
